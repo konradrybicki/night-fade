@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Prefills "type(scope): " from the branch name, e.g. feature/onboarding -> "feature(onboarding): ".
+# The scope is the part of the branch name before the first hyphen: bugfix/timer-not-firing -> "bugfix(timer): ".
+# Only runs for a plain `git commit` (no -m, merge, squash or amend).
+
+msg_file=$1
+source=$2
+
+[ -n "$source" ] && exit 0
+
+branch=$(git symbolic-ref --short HEAD 2>/dev/null) || exit 0
+
+case "$branch" in
+    feature/* | bugfix/* | refactor/* | chore/* | docs/*) ;;
+    *) exit 0 ;;
+esac
+
+type=${branch%%/*}
+name=${branch#*/}
+scope=${name%%-*}
+
+if grep -v '^#' "$msg_file" | grep -q '[^[:space:]]'; then
+    exit 0
+fi
+
+tmp=$(mktemp)
+printf '%s(%s): \n' "$type" "$scope" >"$tmp"
+cat "$msg_file" >>"$tmp"
+mv "$tmp" "$msg_file"

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Checks pushed branch names against docs/conventions.md. Warns only, never blocks the push.
+
+pattern='^((feature|bugfix|refactor|chore|docs)/[a-z0-9][a-z0-9._-]*|release/[0-9]+\.[0-9]+\.[0-9]+|develop|main)$'
+
+while read -r _local_ref _local_sha remote_ref _remote_sha; do
+    case "$remote_ref" in
+        refs/heads/*) branch=${remote_ref#refs/heads/} ;;
+        *) continue ;;
+    esac
+
+    if ! printf '%s\n' "$branch" | grep -Eq "$pattern"; then
+        echo "⚠️  Branch name \"$branch\" doesn't follow the convention (push not blocked)." >&2
+        echo "   Use feature/, bugfix/, refactor/, chore/ or docs/ plus a lowercase name, or release/x.y.z." >&2
+    fi
+done
+
+exit 0

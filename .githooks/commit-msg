@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Checks the commit message against docs/conventions.md. Warns only, never blocks the commit.
+# Expected: <type>(<optional scope>): <lowercase imperative summary, no trailing period>
+
+subject=$(grep -v '^#' "$1" | grep -m 1 '[^[:space:]]')
+
+case "$subject" in
+    "Merge "* | "Revert "* | "fixup! "* | "squash! "* | "amend! "*) exit 0 ;;
+esac
+
+pattern='^(feature|bugfix|refactor|chore|docs)(\([a-z0-9-]+\))?: [a-z0-9].*[^.]$'
+
+if ! printf '%s\n' "$subject" | grep -Eq "$pattern"; then
+    echo "⚠️  Commit message doesn't follow the convention (commit not blocked):" >&2
+    echo "   \"$subject\"" >&2
+    echo "   Expected: <type>(<scope>): <summary>, e.g. feature(onboarding): add mode selection screen" >&2
+    echo "   Types: feature, bugfix, refactor, chore, docs. See docs/conventions.md." >&2
+fi
+
+exit 0

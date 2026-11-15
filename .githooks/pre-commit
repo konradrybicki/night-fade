@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Lints staged Swift files with swift-format. Warns only, never blocks the commit.
+
+files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.swift')
+[ -z "$files" ] && exit 0
+
+if ! xcrun --find swift-format >/dev/null 2>&1; then
+    echo "pre-commit: swift-format not found, skipping lint." >&2
+    exit 0
+fi
+
+# shellcheck disable=SC2086
+if ! output=$(xcrun swift-format lint --strict $files 2>&1); then
+    echo "⚠️  swift-format found issues (commit not blocked):" >&2
+    echo "$output" >&2
+    echo "   Fix with: swift format --in-place --recursive --parallel SleepyTune SleepyTuneWatch Packages" >&2
+fi
+
+exit 0

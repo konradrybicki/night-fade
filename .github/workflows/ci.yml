@@ -1,0 +1,57 @@
+name: CI
+
+# Runs once per pull request (and on every new push to it). No push trigger: develop and main
+# only change through merged pull requests, which have already passed this check.
+
+on:
+  pull_request:
+    branches: [develop, main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Lint, build & test
+    runs-on: xcode-27
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '27.0'
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: Lint (swift-format)
+        run: swift format lint --strict --recursive --parallel SleepyTune SleepyTuneWatch Packages
+
+      - name: Test Domain package
+        run: swift test --package-path Packages/Domain
+
+      - name: Build iOS app (includes embedded Watch app)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project SleepyTune.xcodeproj \
+            -scheme SleepyTune \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Build watchOS app
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project SleepyTune.xcodeproj \
+            -scheme SleepyTuneWatch \
+            -destination 'generic/platform=watchOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO
