@@ -57,6 +57,11 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		6059F4BF30ABB70C0079A62E /* CITest */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CITest;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,7 @@
 				5E0000000000000000000010 /* SleepyTune */,
 				5E0000000000000000000011 /* SleepyTuneWatch */,
 				602DB26A30AA6F580097D823 /* Config */,
+				6059F4BF30ABB70C0079A62E /* CITest */,
 				5E0000000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				5E0000000000000000000010 /* SleepyTune */,
+				6059F4BF30ABB70C0079A62E /* CITest */,
 			);
 			name = SleepyTune;
 			packageProductDependencies = (
