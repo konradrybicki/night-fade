@@ -52,7 +52,7 @@ SleepyTune/
 ├── Packages/
 │   └── Domain/            # Shared domain models and session state machine (empty for now)
 ├── Config/                # .xcconfig build settings (Local.xcconfig is gitignored)
-├── docs/                  # Architecture decisions and conventions
+├── docs/                  # Features, architecture decisions and conventions
 ├── .githooks/             # Local Git hooks (warn only)
 └── .github/workflows/     # CI (pull requests only)
 ```
@@ -67,7 +67,7 @@ App targets use Xcode's folder-synchronized groups: files you add to `SleepyTune
 - Swift Package Manager (local packages), Swift Testing, swift-format
 - Python backend for Spotify, added later
 
-Details are in [docs/architecture.md](docs/architecture.md).
+Details are in [docs/architecture.md](docs/architecture.md). The feature scope and build order are in [docs/features.md](docs/features.md).
 
 ## Contributing
 
