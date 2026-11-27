@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-SleepyTune is an iOS and watchOS app that pauses Spotify or Apple Music when the user falls asleep. It has three modes: AirPods, Apple Watch and Timer. Read `docs/features.md` for the scope and build order, `docs/architecture.md` before designing features and `docs/conventions.md` before branching or committing.
+NightFade (formerly SleepyTune; code, targets and folders still use the old name until they're renamed) is an iOS and watchOS app that pauses Spotify or Apple Music when the user falls asleep. It has three modes: AirPods, Apple Watch and Timer. Read `docs/features.md` for the scope and build order, `docs/architecture.md` before designing features and `docs/conventions.md` before branching or committing.
 
 ## Layout
 - `SleepyTune/`: iOS app target. Folder-synchronized group, so new files on disk are picked up automatically, with no `project.pbxproj` edits.

@@ -1,6 +1,8 @@
-# SleepyTune
+# NightFade
 
 An iOS and watchOS app that pauses Spotify or Apple Music when you fall asleep.
+
+> The app was renamed from SleepyTune. The Xcode project, targets, folders and bundle IDs still use the old name until the code rename is done.
 
 > Status: early setup. The project skeleton is in place, and features haven't been implemented yet.
 

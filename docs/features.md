@@ -14,9 +14,9 @@ Scope of the first release. Technical background lives in [architecture.md](arch
 ### 2. Onboarding
 - Choosing the music service (see 1).
 - **Mode selection:** AirPods / Apple Watch / Timer, each with a short explanation.
-  - **AirPods detection:** recognizes connected AirPods, guesses the model from the name, and the user confirms it.
-  - Watch detection: whether a paired Apple Watch exists.
-- **Permissions**, asked only when needed: MusicKit, HealthKit (Watch mode and analytics).
+  - **AirPods:** lists the AirPods models that support sleep detection, then waits for AirPods to connect (detected from the audio route). The model can't be read reliably, so the app doesn't guess it.
+  - **Apple Watch:** checks that a Watch is paired and that the NightFade Watch app is installed (WatchConnectivity), and continues on its own once both are true.
+- **Permissions**, asked only when needed: MusicKit, HealthKit heart rate (Watch mode only).
 - The analytics opt-out shown or explained (see 6).
 
 ### 3. Music player
@@ -33,7 +33,8 @@ Scope of the first release. Technical background lives in [architecture.md](arch
 - All modes share one **session state**: idle → armed → monitoring → sleep detected → pausing → paused / failed / cancelled.
 
 ### 5. Analytics (charts)
-- **The main chart:** when the user fell asleep and when the music paused, overlaid on HealthKit sleep stages (read live from HealthKit, never stored).
+- **The main chart:** a timeline of the night with when the music started, when the user fell asleep and when the music paused. Only moments NightFade records itself, no HealthKit sleep stages.
+- **Stats:** time listened before falling asleep, fall-asleep time, pause time, delay between sleep and pause, and 7-night averages.
 - A **session history** list, each session with its details.
 - **AirPods mode:** a locked state ("Available in Watch or Timer mode"), because iOS gives apps no signal when AirPods pause playback.
 - Sessions stored in SwiftData, synced through iCloud later (needs the paid developer account).
@@ -69,6 +70,7 @@ Scope of the first release. Technical background lives in [architecture.md](arch
 - **Product analytics:** TelemetryDeck with a fixed list of allowed events. **No health values or sleep times.**
 - Both behind protocols, with no-op implementations for Debug builds, tests, previews and CI. Their keys stay in `Local.xcconfig`, out of the public repo.
 - **Privacy:** a privacy policy page, and the App Store label "Crash Data" and "Product Interaction" (not linked to identity).
+  - To do before release: write the policy in the repo (English and Polish, e.g. `docs/privacy-policy.md`) and publish it with GitHub Pages. The app links to that URL from Account and onboarding, opening it in an in-app Safari sheet. It should cover on-device data, the Spotify backend data and how to delete it, HealthKit heart rate, third parties (Spotify, TelemetryDeck, Sentry, backend host), retention, GDPR rights and a contact email. Get it reviewed before publishing.
 - **Error states** in each feature: no Premium, permission denied, nothing playing, iPhone unreachable, no network.
 - **Design:** dark mode first, Dynamic Type, VoiceOver labels, layouts that handle longer text.
 
@@ -76,3 +78,4 @@ Scope of the first release. Technical background lives in [architecture.md](arch
 - iCloud sync of sessions (needs the paid developer account).
 - Fade-out before pausing (Apple Music only).
 - More languages, based on demand.
+- Sleep stages from HealthKit drawn under the night's timeline (read live, never stored).
