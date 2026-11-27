@@ -45,7 +45,7 @@ xcodebuild build -project NightFade.xcodeproj -scheme NightFade -destination 'ge
 ## Project structure
 
 ```
-night-fade/
+nightfade/
 ├── NightFade.xcodeproj
 ├── NightFade/             # iOS app target
 ├── NightFadeWatch/        # watchOS app target
