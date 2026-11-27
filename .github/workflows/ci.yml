@@ -33,7 +33,7 @@ jobs:
           swift --version
 
       - name: Lint (swift-format)
-        run: swift format lint --strict --recursive --parallel SleepyTune SleepyTuneWatch Packages
+        run: swift format lint --strict --recursive --parallel NightFade NightFadeWatch Packages
 
       - name: Test Domain package
         run: swift test --package-path Packages/Domain
@@ -42,8 +42,8 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild build \
-            -project SleepyTune.xcodeproj \
-            -scheme SleepyTune \
+            -project NightFade.xcodeproj \
+            -scheme NightFade \
             -destination 'generic/platform=iOS Simulator' \
             CODE_SIGNING_ALLOWED=NO
 
@@ -51,7 +51,7 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild build \
-            -project SleepyTune.xcodeproj \
-            -scheme SleepyTuneWatch \
+            -project NightFade.xcodeproj \
+            -scheme NightFadeWatch \
             -destination 'generic/platform=watchOS Simulator' \
             CODE_SIGNING_ALLOWED=NO

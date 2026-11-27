@@ -72,7 +72,7 @@ The iPhone is the only writer. The Watch never writes to CloudKit.
 | Preferences | SwiftData, synced via CloudKit |
 | Backend session token | Keychain |
 | Raw heart-rate and motion samples | Local only, short retention, or not stored at all |
-| HealthKit sleep stages | **Never stored.** Read live from HealthKit (guideline 5.1.3) |
+| HealthKit sleep stages | Not used in the first release. If added later: **never stored**, read live from HealthKit (guideline 5.1.3) |
 | Spotify ID, refresh token, pending timers | Backend |
 
 SwiftData models must follow CloudKit's rules from day one: no `@Attribute(.unique)`, every property has a default or is optional, all relationships are optional.

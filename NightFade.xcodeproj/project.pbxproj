@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E0000000000000000000050 /* SleepyTuneWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5E0000000000000000000021 /* SleepyTuneWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5E0000000000000000000050 /* NightFadeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5E0000000000000000000021 /* NightFadeWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5E0000000000000000000051 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 5E0000000000000000000071 /* Domain */; };
 		5E0000000000000000000052 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 5E0000000000000000000072 /* Domain */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 			containerPortal = 5E0000000000000000000001 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5E0000000000000000000031;
-			remoteInfo = SleepyTuneWatch;
+			remoteInfo = NightFadeWatch;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -29,7 +29,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				5E0000000000000000000050 /* SleepyTuneWatch.app in Embed Watch Content */,
+				5E0000000000000000000050 /* NightFadeWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,19 +37,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E0000000000000000000020 /* SleepyTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepyTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E0000000000000000000021 /* SleepyTuneWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepyTuneWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0000000000000000000020 /* NightFade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightFade.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0000000000000000000021 /* NightFadeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightFadeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5E0000000000000000000010 /* SleepyTune */ = {
+		5E0000000000000000000010 /* NightFade */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SleepyTune;
+			path = NightFade;
 			sourceTree = "<group>";
 		};
-		5E0000000000000000000011 /* SleepyTuneWatch */ = {
+		5E0000000000000000000011 /* NightFadeWatch */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SleepyTuneWatch;
+			path = NightFadeWatch;
 			sourceTree = "<group>";
 		};
 		602DB26A30AA6F580097D823 /* Config */ = {
@@ -82,8 +82,8 @@
 		5E0000000000000000000002 = {
 			isa = PBXGroup;
 			children = (
-				5E0000000000000000000010 /* SleepyTune */,
-				5E0000000000000000000011 /* SleepyTuneWatch */,
+				5E0000000000000000000010 /* NightFade */,
+				5E0000000000000000000011 /* NightFadeWatch */,
 				602DB26A30AA6F580097D823 /* Config */,
 				5E0000000000000000000003 /* Products */,
 			);
@@ -92,8 +92,8 @@
 		5E0000000000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E0000000000000000000020 /* SleepyTune.app */,
-				5E0000000000000000000021 /* SleepyTuneWatch.app */,
+				5E0000000000000000000020 /* NightFade.app */,
+				5E0000000000000000000021 /* NightFadeWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E0000000000000000000030 /* SleepyTune */ = {
+		5E0000000000000000000030 /* NightFade */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E0000000000000000000081 /* Build configuration list for PBXNativeTarget "SleepyTune" */;
+			buildConfigurationList = 5E0000000000000000000081 /* Build configuration list for PBXNativeTarget "NightFade" */;
 			buildPhases = (
 				5E0000000000000000000040 /* Sources */,
 				5E0000000000000000000041 /* Frameworks */,
@@ -116,19 +116,19 @@
 				5E0000000000000000000061 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				5E0000000000000000000010 /* SleepyTune */,
+				5E0000000000000000000010 /* NightFade */,
 			);
-			name = SleepyTune;
+			name = NightFade;
 			packageProductDependencies = (
 				5E0000000000000000000071 /* Domain */,
 			);
-			productName = SleepyTune;
-			productReference = 5E0000000000000000000020 /* SleepyTune.app */;
+			productName = NightFade;
+			productReference = 5E0000000000000000000020 /* NightFade.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5E0000000000000000000031 /* SleepyTuneWatch */ = {
+		5E0000000000000000000031 /* NightFadeWatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E0000000000000000000082 /* Build configuration list for PBXNativeTarget "SleepyTuneWatch" */;
+			buildConfigurationList = 5E0000000000000000000082 /* Build configuration list for PBXNativeTarget "NightFadeWatch" */;
 			buildPhases = (
 				5E0000000000000000000044 /* Sources */,
 				5E0000000000000000000045 /* Frameworks */,
@@ -139,14 +139,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5E0000000000000000000011 /* SleepyTuneWatch */,
+				5E0000000000000000000011 /* NightFadeWatch */,
 			);
-			name = SleepyTuneWatch;
+			name = NightFadeWatch;
 			packageProductDependencies = (
 				5E0000000000000000000072 /* Domain */,
 			);
-			productName = SleepyTuneWatch;
-			productReference = 5E0000000000000000000021 /* SleepyTuneWatch.app */;
+			productName = NightFadeWatch;
+			productReference = 5E0000000000000000000021 /* NightFadeWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +167,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5E0000000000000000000080 /* Build configuration list for PBXProject "SleepyTune" */;
+			buildConfigurationList = 5E0000000000000000000080 /* Build configuration list for PBXProject "NightFade" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -184,8 +184,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E0000000000000000000030 /* SleepyTune */,
-				5E0000000000000000000031 /* SleepyTuneWatch */,
+				5E0000000000000000000030 /* NightFade */,
+				5E0000000000000000000031 /* NightFadeWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -227,7 +227,7 @@
 /* Begin PBXTargetDependency section */
 		5E0000000000000000000061 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5E0000000000000000000031 /* SleepyTuneWatch */;
+			target = 5E0000000000000000000031 /* NightFadeWatch */;
 			targetProxy = 5E0000000000000000000060 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -364,7 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SleepyTune;
+				INFOPLIST_KEY_CFBundleDisplayName = NightFade;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -393,7 +393,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SleepyTune;
+				INFOPLIST_KEY_CFBundleDisplayName = NightFade;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,7 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SleepyTune;
+				INFOPLIST_KEY_CFBundleDisplayName = NightFade;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(APP_BUNDLE_IDENTIFIER)";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
@@ -447,7 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SleepyTune;
+				INFOPLIST_KEY_CFBundleDisplayName = NightFade;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "$(APP_BUNDLE_IDENTIFIER)";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
@@ -467,7 +467,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5E0000000000000000000080 /* Build configuration list for PBXProject "SleepyTune" */ = {
+		5E0000000000000000000080 /* Build configuration list for PBXProject "NightFade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E0000000000000000000090 /* Debug */,
@@ -476,7 +476,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E0000000000000000000081 /* Build configuration list for PBXNativeTarget "SleepyTune" */ = {
+		5E0000000000000000000081 /* Build configuration list for PBXNativeTarget "NightFade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E0000000000000000000092 /* Debug */,
@@ -485,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E0000000000000000000082 /* Build configuration list for PBXNativeTarget "SleepyTuneWatch" */ = {
+		5E0000000000000000000082 /* Build configuration list for PBXNativeTarget "NightFadeWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E0000000000000000000094 /* Debug */,

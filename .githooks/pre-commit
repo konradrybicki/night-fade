@@ -14,7 +14,7 @@ fi
 if ! output=$(xcrun swift-format lint --strict $files 2>&1); then
     echo "⚠️  swift-format found issues (commit not blocked):" >&2
     echo "$output" >&2
-    echo "   Fix with: swift format --in-place --recursive --parallel SleepyTune SleepyTuneWatch Packages" >&2
+    echo "   Fix with: swift format --in-place --recursive --parallel NightFade NightFadeWatch Packages" >&2
 fi
 
 exit 0

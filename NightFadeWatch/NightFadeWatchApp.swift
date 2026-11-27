@@ -1,10 +1,10 @@
 import SwiftUI
 
 @main
-struct SleepyTuneApp: App {
+struct NightFadeWatchApp: App {
     var body: some Scene {
         WindowGroup {
-            Text("SleepyTune")
+            Text("NightFade")
         }
     }
 }

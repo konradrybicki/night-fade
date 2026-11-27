@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5E0000000000000000000030"
-               BuildableName = "SleepyTune.app"
-               BlueprintName = "SleepyTune"
-               ReferencedContainer = "container:SleepyTune.xcodeproj">
+               BuildableName = "NightFade.app"
+               BlueprintName = "NightFade"
+               ReferencedContainer = "container:NightFade.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5E0000000000000000000030"
-            BuildableName = "SleepyTune.app"
-            BlueprintName = "SleepyTune"
-            ReferencedContainer = "container:SleepyTune.xcodeproj">
+            BuildableName = "NightFade.app"
+            BlueprintName = "NightFade"
+            ReferencedContainer = "container:NightFade.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5E0000000000000000000030"
-            BuildableName = "SleepyTune.app"
-            BlueprintName = "SleepyTune"
-            ReferencedContainer = "container:SleepyTune.xcodeproj">
+            BuildableName = "NightFade.app"
+            BlueprintName = "NightFade"
+            ReferencedContainer = "container:NightFade.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
