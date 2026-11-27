@@ -1,5 +1,5 @@
 // Identity
-APP_BUNDLE_IDENTIFIER = com.konradrybicki.sleepytune
+APP_BUNDLE_IDENTIFIER = com.konradrybicki.nightfade
 WATCH_BUNDLE_IDENTIFIER = $(APP_BUNDLE_IDENTIFIER).watchkitapp
 MARKETING_VERSION = 1.0.0
 CURRENT_PROJECT_VERSION = 1

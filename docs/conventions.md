@@ -78,8 +78,8 @@ The hooks can't see squash commits created on GitHub, so pull request titles hav
 ## Code style
 
 - Formatting and linting with **swift-format** (included in the Xcode toolchain). The config lives in `.swift-format`: 4-space indentation, 120-character lines.
-- Format: `swift format --in-place --recursive --parallel SleepyTune SleepyTuneWatch Packages`
-- Lint, as run in CI: `swift format lint --strict --recursive --parallel SleepyTune SleepyTuneWatch Packages`
+- Format: `swift format --in-place --recursive --parallel NightFade NightFadeWatch Packages`
+- Lint, as run in CI: `swift format lint --strict --recursive --parallel NightFade NightFadeWatch Packages`
 - In Xcode: Editor → Structure → Format File with 'swift-format'.
 
 ## CI

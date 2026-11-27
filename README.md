@@ -2,8 +2,6 @@
 
 An iOS and watchOS app that pauses Spotify or Apple Music when you fall asleep.
 
-> The app was renamed from SleepyTune. The Xcode project, targets, folders and bundle IDs still use the old name until the code rename is done.
-
 > Status: early setup. The project skeleton is in place, and features haven't been implemented yet.
 
 ## Modes
@@ -27,12 +25,12 @@ Works with **Apple Music** and **Spotify** (Spotify needs Premium).
    ```
    DEVELOPMENT_TEAM = <your team ID>
    ```
-   Set the team here rather than in Xcode's Signing & Capabilities tab, which would write it into the shared project file. With a free Personal Team, also add `APP_BUNDLE_IDENTIFIER = com.konradrybicki.sleepytune.temp`, so the real bundle ID isn't registered to that team.
+   Set the team here rather than in Xcode's Signing & Capabilities tab, which would write it into the shared project file. With a free Personal Team, also add `APP_BUNDLE_IDENTIFIER = com.konradrybicki.nightfade.temp`, so the real bundle ID isn't registered to that team.
 2. Enable the project's Git hooks. They only warn, for example about formatting or commit messages:
    ```bash
    git config core.hooksPath .githooks
    ```
-3. Open `SleepyTune.xcodeproj` and run the `SleepyTune` scheme. The Watch app is embedded automatically, and the `SleepyTuneWatch` scheme runs it on its own.
+3. Open `NightFade.xcodeproj` and run the `NightFade` scheme. The Watch app is embedded automatically, and the `NightFadeWatch` scheme runs it on its own.
 
 Command line:
 
@@ -41,16 +39,16 @@ swift test --package-path Packages/Domain
 ```
 
 ```bash
-xcodebuild build -project SleepyTune.xcodeproj -scheme SleepyTune -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO
+xcodebuild build -project NightFade.xcodeproj -scheme NightFade -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO
 ```
 
 ## Project structure
 
 ```
-SleepyTune/
-├── SleepyTune.xcodeproj
-├── SleepyTune/            # iOS app target
-├── SleepyTuneWatch/       # watchOS app target
+night-fade/
+├── NightFade.xcodeproj
+├── NightFade/             # iOS app target
+├── NightFadeWatch/        # watchOS app target
 ├── Packages/
 │   └── Domain/            # Shared domain models and session state machine (empty for now)
 ├── Config/                # .xcconfig build settings (Local.xcconfig is gitignored)
@@ -59,7 +57,7 @@ SleepyTune/
 └── .github/workflows/     # CI (pull requests only)
 ```
 
-App targets use Xcode's folder-synchronized groups: files you add to `SleepyTune/` or `SleepyTuneWatch/` on disk show up in the project automatically.
+App targets use Xcode's folder-synchronized groups: files you add to `NightFade/` or `NightFadeWatch/` on disk show up in the project automatically.
 
 ## Tech stack
 
